@@ -2,7 +2,7 @@ const threats = {
   phisinga: {
     number: '01', name: 'Phisinga', category: 'Engainu soziala', color: 'coral',
     short: 'Konfiantzazko itxura duen mezu baten bidez zure datuak lortzea.',
-    definition: 'Phisinga erasotzaileak pertsona edo erakunde fidagarri baten itxura hartzen duen iruzurra da. Helburua zure pasahitzak, kreditu-txartelaren datuak edo bestelako informazio pribatua eskuratzea da.',
+    definition: 'Mezu edo posta elektroniko faltsuen bidez zure datu pertsonalak (pasahitzak, banku-zenbakiak) lapurtzeko erabiltzen den engainua.',
     works: ['Mezu edo dei sinesgarri bat jasotzen duzu.', 'Esteka edo eranskin batera joateko eskatzen dizute.', 'Web faltsuan datuak sartzean, erasotzaileak eskuratzen ditu.'],
     signs: ['Premiazko edo beldurra sortzen duen mezua', 'Helbide arraroa edo akats ortografikoak', 'Pasahitza edo ordainketa eskatzea'],
     protect: 'Ez sakatu esteka susmagarririk. Egiaztatu bidaltzailea beste kanal ofizial baten bidez eta aktibatu bi urratseko autentifikazioa.'
@@ -10,7 +10,7 @@ const threats = {
   'biren-erasoa': {
     number: '02', name: 'Biren erasoa', category: 'Sarbide-erasoa', color: 'lime',
     short: 'Pasahitzak behin eta berriz probatuz kontu batera sartzeko saiakera.',
-    definition: 'Biren erasoa kontu edo sistema batean sartzeko pasahitz-konbinazio asko automatikoki probatzen dituen teknika da. Pasahitz labur, arrunt edo berrerabiliek arriskua handitzen dute.',
+    definition: 'Gailu batean sartu, fitxategiak kaltetzen dituen eta bere burua beste ordenagailu batzuetara zabaltzen duen programa kaltegarria.',
     works: ['Programak pasahitz-konbinazio ugari sortzen ditu.', 'Sistemak saio-hasiera bakoitza egiaztatzen du.', 'Konbinazioa zuzena bada, kontua arriskuan geratzen da.'],
     signs: ['Saio-hasiera hutsen jakinarazpenak', 'Kontua aldi baterako blokeatzea', 'Kokapen ezezaguneko saio aktiboak'],
     protect: 'Erabili pasahitz luze eta bakarra, saio-hasiera saiakerak mugatu eta gaitu bi urratseko autentifikazioa.'
@@ -18,7 +18,7 @@ const threats = {
   troiarra: {
     number: '03', name: 'Troiarra', category: 'Malwarea', color: 'blue',
     short: 'Aplikazio edo fitxategi erabilgarriaren itxurapean ezkutatzen den programa kaltegarria.',
-    definition: 'Troiarra software legitimoa balitz bezala aurkezten den malware mota da. Instalatu ondoren, datuak lapurtu, beste mehatxu batzuk deskargatu edo gailuaren kontrola urrutitik eman dezake.',
+    definition: 'Programa erabilgarri eta seguru baten itxura duen mehatxua; kalterik egiten ez duela dirudi, baina barruan arriskua ezkutatzen du.',
     works: ['Programa erakargarri edo erabilgarri baten itxura hartzen du.', 'Erabiltzaileak instalatu edo exekutatu egiten du.', 'Atzealdean, erasotzailearekin komunikatzen da.'],
     signs: ['Iturri ezezaguneko instalatzaileak', 'Gailua motelago edo ezegonkorrago egotea', 'Aplikazio ezezagunak agertzea'],
     protect: 'Deskargatu aplikazioak iturri ofizialetatik, mantendu antibirusa eguneratuta eta ez exekutatu jatorri ezezaguneko fitxategirik.'
@@ -26,7 +26,7 @@ const threats = {
   backdoorsak: {
     number: '04', name: 'Backdoorsak', category: 'Sarbide ezkutua', color: 'dark',
     short: 'Segurtasun-kontrolak saihestuz sistema batera sartzeko ate ezkutuak.',
-    definition: 'Backdoorra sistema batean ezkutuan uzten den sarbide-bidea da. Batzuetan malwareak sortzen du; beste batzuetan, softwarearen akats edo konfigurazio txar batek. Erasotzaileari ohiko autentifikazioa saihesteko aukera ematen dio.',
+    definition: 'Gailu baten segurtasuna saihestuz, erasotzaile bati ezkutuan sartzeko eta sistema urrunetik kontrolatzeko bidea ematen dioten sarrera ezkutuak.',
     works: ['Kode edo konfigurazio batek sarbide berezia uzten du.', 'Erasotzaileak ate hori aurkitu edo aktibatzen du.', 'Sisteman jardun dezake ohiko erabiltzaile gisa agertu gabe.'],
     signs: ['Erabiltzaile edo zerbitzu ezezagunak', 'Sareko konexio arraroak', 'Sistemaren ezarpen aldaketak baimenik gabe'],
     protect: 'Eguneratu softwarea, kendu erabiltzaile lehenetsiak, itxi behar ez diren zerbitzuak eta berrikusi sarbide-erregistroak.'
@@ -34,7 +34,7 @@ const threats = {
   spywarea: {
     number: '05', name: 'Spywarea', category: 'Zaintza digitala', color: 'yellow',
     short: 'Zure jarduera ezkutuan monitorizatu eta informazioa biltzen duen softwarea.',
-    definition: 'Spywarea erabiltzailearen baimen argirik gabe informazioa biltzen duen softwarea da. Nabigazioa, mezuak, kokapena edo teklatuan idatzitakoa kontrola dezake.',
+    definition: 'Zure gailuan zer egiten duzun (bisitatutako orriak, sakatutako teklak...) ezkutuan espiatzen eta datu horiek biltzen dituen programa.',
     works: ['Gailuan ezkutuan instalatzen da.', 'Atzealdean jarduera eta datuak biltzen ditu.', 'Informazioa urruneko zerbitzari batera bidal dezake.'],
     signs: ['Bateria edo datu mugikorrak ohikoa baino gehiago kontsumitzea', 'Popup eta birzuzenketa ezezagunak', 'Pribatutasun-ezarpen aldaketak'],
     protect: 'Berrikusi aplikazioen baimenak, desinstalatu ezezagunak direnak eta egin segurtasun-azterketak software fidagarriarekin.'
@@ -42,7 +42,7 @@ const threats = {
   stealerrak: {
     number: '06', name: 'Stealerrak', category: 'Datu-lapurreta', color: 'violet',
     short: 'Nabigatzaile eta aplikazioetan gordetako datuak lapurtzeko malwarea.',
-    definition: 'Stealerrak informazioa lapurtzera bideratutako malwarea dira. Nabigatzaileko pasahitzak, cookie-ak, saio-tokenak, kriptomoneta-zorroak eta bestelako datu baliotsuak bilatzen dituzte.',
+    definition: 'Gailuan gordeta dituzun pasahitzak, saio-hasierako datuak eta txartel-zenbakiak zuzenean lapurtzera bideratutako programa mota.',
     works: ['Malwarea fitxategi edo deskarga baten bidez iristen da.', 'Gailuko aplikazio eta nabigatzaileak aztertzen ditu.', 'Aurkitutako datuak erasotzaileari bidaltzen dizkio.'],
     signs: ['Kontuetan baimenik gabeko saioak', 'Nabigatzaileko saioak itxi edo aldatu izana', 'Antibirusak fitxategi susmagarriak detektatzea'],
     protect: 'Ez gorde datu kritikoak nabigatzailean, erabili pasahitz-kudeatzailea, aldatu pasahitzak infekzioaren ondoren eta amaitu saio guztiak.'

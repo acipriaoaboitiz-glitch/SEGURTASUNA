@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../xampp/htdocs/WAE"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SEGURTASUNA"
+	}
+}
