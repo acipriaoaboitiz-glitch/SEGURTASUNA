@@ -68,3 +68,21 @@ if (detail) {
     <section class="protect-banner accent-${threat.color}"><div><p class="eyebrow">03 / ZURE TXANDA</p><h2>Nola babestu?</h2><p>${threat.protect}</p></div></section>
   `;
 }
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!reducedMotion) {
+  let animationFrame;
+
+  window.addEventListener('pointermove', (event) => {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(() => {
+      document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
+      document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
+    });
+  }, { passive: true });
+
+  window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-depth', `${window.scrollY}px`);
+  }, { passive: true });
+}
