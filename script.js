@@ -70,6 +70,126 @@ const threats = {
     works: ['Malwarea fitxategi edo deskarga baten bidez iristen da.', 'Gailuko aplikazio eta nabigatzaileak aztertzen ditu.', 'Aurkitutako datuak erasotzaileari bidaltzen dizkio.'],
     signs: ['Kontuetan baimenik gabeko saioak', 'Nabigatzaileko saioak itxi edo aldatu izana', 'Antibirusak fitxategi susmagarriak detektatzea'],
     protect: 'Ez gorde datu kritikoak nabigatzailean, erabili pasahitz-kudeatzailea, aldatu pasahitzak infekzioaren ondoren eta amaitu saio guztiak.'
+  },
+  koobface: {
+    number: '07', name: 'Koobface', category: 'Sare sozialetako malwarea', color: 'coral',
+    short: 'Sare sozialen bidez zabaltzen den harra, bideo faltsuen amuarekin.',
+    definition: 'Koobface Facebook izenarekin hitz-jokoa egiten duen harra da, sare sozialen bidez zabaltzen dena. Kontaktu baten itxurazko mezu batean bideo faltsu baterako esteka bidaltzen dizu; klik eginez gero, ordenagailua kutsa dezake eta zure informazioa lapurtu.',
+    caseYear: '2008', caseTitle: 'Koobface harra',
+    caseText: 'Koobface sare sozialetako kontuen bidez zabaldu zen, erabiltzaileak bideo faltsuak ikustera erakarriz.',
+    realExample: 'Lagun baten kontutik bideo bat ikusteko esteka iristen zaizu. Estekan klik egin ondoren, fitxategi bat deskargatzeko eskatzen dizu.',
+    characteristics: ['Kontaktu ezagun baten mezua imitatzen du', 'Bideo edo esteka faltsuak erabiltzen ditu', 'Informazioa lapurtu edo malware gehiago instala dezake'],
+    works: ['Mezu engainagarria sare sozial baten bidez iristen da.', 'Bideo faltsuaren estekan klik egitera edo fitxategia deskargatzera bultzatzen zaitu.', 'Exekutatzean, gailua kutsa dezake eta datuak lapurtu.'],
+    signs: ['Bideo bat ikusteko deskarga ezezagunak eskatzea', 'Zure kontutik zuk bidali gabeko mezuak bidaltzea', 'Gailuan jarduera edo programa susmagarriak agertzea'],
+    protect: 'Ez ireki ustekabeko bideo-estekak, egiaztatu kontaktuarekin beste kanal baten bidez eta mantendu sistema eta antibirusa eguneratuta.'
+  },
+  botnet: {
+    number: '08', name: 'Botnet', category: 'Gailu kutsatuen sarea', color: 'blue',
+    short: 'Erasotzaile batek urrunetik kontrolatzen duen gailu kutsatuen multzoa.',
+    definition: 'Botnet bat ordenagailu eta beste gailu kutsatu askoren sarea da. Hacker batek urrunetik kontrolatzen ditu jabeak ohartu gabe, eta batera erabil ditzake spam-mezuak bidaltzeko edo webguneak blokeatzeko.',
+    caseYear: '2016', caseTitle: 'Mirai botneta',
+    caseText: 'Mirai botnetak segurtasun eskaseko gailuak kutsatu zituen eta haiek batera erabili zituen zerbitzuen aurkako eraso handietan.',
+    realExample: 'Zure routerra kutsatuta badago, erasotzaileak beste gailu kutsatu batzuekin batera erabil dezake webgune baten zerbitzaria gainkargatzeko.',
+    characteristics: ['Gailu kutsatu asko biltzen ditu', 'Jabeek ez dute kontrola galdu dutela nabaritzen', 'Spam-a bidaltzeko edo zerbitzuak eteteko erabil daiteke'],
+    works: ['Malwareak gailu bat kutsatzen du.', 'Gailua erasotzailearen urruneko kontrol-sistemarekin konektatzen da.', 'Botneteko gailuek aginduak batera betetzen dituzte.'],
+    signs: ['Interneteko trafiko edo datu-kontsumo ezohikoa', 'Gailua motelago ibiltzea edo berotzea', 'Routerrean konexio ezezagunak agertzea'],
+    protect: 'Eguneratu gailuen softwarea, aldatu routerraren pasahitz lehenetsia eta desgaitu erabiltzen ez dituzun urruneko sarbideak.'
+  },
+  'indar-gordineko-erasoa': {
+    number: '09', name: 'Indar gordineko erasoa', category: 'Pasahitzen aurkako erasoa', color: 'violet',
+    short: 'Pasahitza asmatu arte konbinazio ugari automatikoki probatzea.',
+    definition: 'Kutxa gotor bat ireki nahian konbinazio guztiak banan-banan probatzea bezalakoa da. Erasotzailearen programak milaka pasahitz proba ditzake segundoko, zurea asmatu eta kontuan sartu arte.',
+    caseYear: 'Adibidea', caseTitle: 'Pasahitzak probatzea',
+    caseText: 'Pasahitz labur edo ohikoak automatikoki asmatzeko errazagoak dira; kontuetan saio-hasierako saiakera asko egiten dira.',
+    realExample: 'Erasotzaileak kontu batean pasahitz-konbinazio ugari probatzen ditu, zuzena aurkitu eta saioa hasi arte.',
+    characteristics: ['Saiakera asko automatikoki egiten ditu', 'Pasahitz labur edo arruntak aprobetxatzen ditu', 'Saiakerak mugatuta ez badaude arrakasta izan dezake'],
+    works: ['Programak balizko pasahitz-konbinazioak sortzen ditu.', 'Konbinazio bakoitza kontuan saioa hasteko probatzen du.', 'Pasahitza asmatzen badu, erasotzailea kontuan sartzen da.'],
+    signs: ['Saio-hasiera hutsen jakinarazpen ugari', 'Kontua aldi baterako blokeatzea', 'Zuk ezagutzen ez dituzun saio aktiboak'],
+    protect: 'Erabili luzea eta bakarra den pasahitza, aktibatu bi urratseko autentifikazioa eta mugatu saio-hasierako saiakerak.'
+  },
+  stuxnet: {
+    number: '10', name: 'Stuxnet', category: 'Industria-sistemen aurkako harra', color: 'coral',
+    short: 'Industria-kontrol sistemak helburu izan zituen malware sofistikatua.',
+    definition: 'Stuxnet harrak Natanzeko zentral nuklearreko Siemens kontrol-sistemei eraso zien. Zentrifugen funtzionamendua manipulatu zuen; hainbat iturriren arabera, 1.000 inguru kaltetu zituen.',
+    caseYear: '2010', caseTitle: 'Natanzeko zentrifugak',
+    caseText: 'Stuxnetek Siemens kontrol-softwarea zuten industria-sistemak bilatu eta kontrolagailuen funtzionamendua aldatu zuen.',
+    realExample: 'USB memoria baten bidez irits zitekeen sarera, eta Windowsen ahultasunak baliatu kontrol-sistemetara heltzeko.',
+    characteristics: ['Siemens industria-kontrol sistemak zituen helburu', 'USB eta sare bidez heda zitekeen', 'Kontrolagailuen aginduak manipula zitzakeen'],
+    works: ['Sistema kutsatu batera iristen zen USB edo sare bidez.', 'Siemens kontrol-softwarea eta ekipo egokiak bilatzen zituen.', 'Kontrolagailuei aginduak aldarazten zizkien, kalte fisikoa eragiteko.'],
+    signs: ['Kontrol-sistemetan ustekabeko aldaketak', 'USB bidezko infekzio susmagarriak', 'Kontrolagailuen edo prozesu industrialen portaera ezohikoa'],
+    protect: 'Mantendu industria-sistemak eguneratuta, mugatu USB gailuen erabilera eta aplikatu segurtasun-neurriak kontrol-sistemaren hornitzailearekin koordinatuta.'
+  },
+  wannacry: {
+    number: '11', name: 'WannaCry', category: 'Ransomware erasoa', color: 'blue',
+    short: 'Mundu osora zabaldu eta ospitale-zerbitzuak eten zituen ransomwarea.',
+    definition: 'WannaCry 2017an zabaldu zen ransomwarea izan zen: kutsatutako ordenagailuetako fitxategiak blokeatu eta erreskatea eskatu zuen. Erresuma Batuko NHSn, gutxienez 81 trust kaltetu zituen eta milaka hitzordu bertan behera utzi ziren.',
+    caseYear: '2017', caseTitle: 'WannaCry eta NHS',
+    caseText: 'National Audit Office-ren arabera, NHSn gutxienez 81 trust kaltetu ziren eta 19.000 hitzordu inguru bertan behera geratu ziren.',
+    realExample: 'Eguneratu gabeko Windows sistema bat kutsatu ondoren, WannaCry sarean zabaldu eta fitxategiak zifratu zituen.',
+    characteristics: ['Fitxategiak zifratu eta erreskatea eskatzen zuen', 'Har moduan hedatzen zen sareetan', 'Ahultasunak zituzten Windows sistemak baliatu zituen'],
+    works: ['Sistema zaurgarri batean sartzen zen.', 'Fitxategiak zifratu eta erabiltzaileari erreskatea eskatzen zion.', 'Sareko beste sistema zaurgarri batzuetara hedatzen zen.'],
+    signs: ['Fitxategiak ireki ezin izatea', 'Erreskate-mezua agertzea', 'Sareko gailu askok aldi berean arazoak izatea'],
+    protect: 'Instalatu segurtasun-eguneraketak, erabili suebakia eta egin datuen segurtasun-kopiak, sarera konektatuta ez dagoen kopia bat barne.'
+  },
+  'atzeko-ate-unitatea': {
+    number: '12', name: 'Atzeko ateak', category: 'Sarbide ezkutua', color: 'dark',
+    short: 'Ohiko segurtasun-kontrolak saihesteko sarbide ezkutuak.',
+    definition: 'Atzeko ate batek sistema batera ezkutuan sartzeko aukera ematen dio erasotzaileari. Softwarean edo firmwarean egon daiteke eta urruneko aginduak exekutatzeko, fitxategiak lapurtzeko edo konfigurazioa aldatzeko erabil daiteke.',
+    caseYear: '2016', caseTitle: 'Mirai eta IoT gailuak',
+    caseText: 'Mirai malwareak pasahitz lehenetsi ahulak zituzten IoT gailuak hartu eta botnet batean sartzen zituen.',
+    realExample: 'Mezu bateko eranskin susmagarri bat exekutatzeak gailuan urruneko sarbidea ematen duen malwarea instala dezake.',
+    characteristics: ['Softwarean edo firmwarean ezkuta daiteke', 'Urruneko sarbidea eta aginduak ahalbidetzen ditu', 'Eranskin, deskarga, USB edo pasahitz ahulen bidez instala daiteke'],
+    works: ['Malwarea edo konfigurazio ezkutua gailuan sartzen da.', 'Atzeko ateak ohiko sarbide-kontrolak saihesten ditu.', 'Erasotzaileak urrunetik aginduak exekutatu edo datuak atera ditzake.'],
+    signs: ['Sareko konexio ezezagunak', 'Erabiltzaile edo zerbitzu ezezagunak', 'Ezarpen edo fitxategi susmagarriak'],
+    protect: 'Eguneratu sistema, aktibatu suebakia, aldatu lehenetsitako pasahitzak, erabili baimen mugatuko kontuak eta ez exekutatu iturri ezezagunetako fitxategirik.'
+  },
+  'botnet-unitatea': {
+    number: '13', name: 'Botnet', category: 'Gailu kutsatuen sarea', color: 'violet',
+    short: 'Urrunetik kontrolatutako gailu kutsatuen sarea.',
+    definition: 'Botnet bat erasotzaile baten agindupean dauden ordenagailu eta gailu kutsatuen multzoa da. Jabeek agian ez dute nabaritzen gailua kontrolpean dagoela.',
+    caseYear: '2016', caseTitle: 'Mirai botneta',
+    caseText: 'Mirai botnetak pasahitz lehenetsiak zituzten IoT gailuak kutsatu eta DDoS erasoetan erabili zituen.',
+    realExample: 'Kutsatutako router batek beste gailu askorekin batera webgune bati eskaera ugari bidal diezazkioke.',
+    characteristics: ['Gailuak troiar edo pasahitz ahulen bidez kutsa daitezke', 'Kontrol-zentro baten aginduak jasotzen dituzte', 'Spam-a bidaltzeko, malwarea zabaltzeko edo DDoS erasoak egiteko erabil daitezke'],
+    works: ['Gailu bat malware bidez kutsatzen da.', 'Kutsatutako gailua kontrol-zentroarekin komunikatzen da.', 'Botneteko gailuek aginduak batera betetzen dituzte.'],
+    signs: ['Interneteko konexioa moteltzea', 'Disko edo sare-jarduera ezohikoa', 'Zuk bidali gabeko mezuen erantzunak'],
+    protect: 'Aldatu lehenetsitako pasahitzak, instalatu eguneraketak, erabili suebakia eta deskargatu softwarea iturri fidagarrietatik.'
+  },
+  harrak: {
+    number: '14', name: 'Harrak (worms)', category: 'Autohedatzen den malwarea', color: 'lime',
+    short: 'Sarean bere kabuz zabal daitekeen malwarea.',
+    definition: 'Har informatikoa sarean bere kabuz hedatzen den malwarea da; ez du erabiltzaileak ekipo bakoitzean instalatzea behar. Urruneko sarbidea ireki, segurtasun-tresnak oztopatu edo beste malware bat deskarga dezake.',
+    caseYear: '2003', caseTitle: 'SQL Slammer harra',
+    caseText: 'SQL Slammer harra azkar hedatu zen datu-baseetako zerbitzarien ahultasuna baliatuz eta sareko trafiko handia sortuz.',
+    realExample: 'Segurtasun-eguneraketarik gabeko ekipo baten ahultasuna baliatuz, harra sare lokaleko beste ordenagailuetara heda daiteke.',
+    characteristics: ['Gailu batetik bestera bere kabuz heda daiteke', 'Sareko ahultasunak edo USB gailuak balia ditzake', 'Sistema moteldu edo segurtasun-prozesuak oztopa ditzake'],
+    works: ['Ahultasun bat duen ekipo batean sartzen da.', 'Sareko beste ekipo zaurgarri batzuk bilatzen ditu.', 'Bere kopiak hedatzen ditu ekipo horiek kutsatzeko.'],
+    signs: ['Ekipoa moteltzea edo huts egitea', 'Diskoko espazio librea azkar gutxitzea', 'Fitxategi edo alerta susmagarriak agertzea'],
+    protect: 'Instalatu segurtasun-eguneraketak, erabili antibirus eta suebaki eguneratuak, kontuz ibili USBekin eta egin datuen segurtasun-kopiak.'
+  },
+  mamuak: {
+    number: '15', name: 'Mamuak', category: 'Drive-by download erasoa', color: 'yellow',
+    short: 'Webgune kutsatu bat bisitatzean abia daitekeen erasoa.',
+    definition: 'Drive-by download eraso batean, erasotzaileak webgune kaltetu batean script maltzur bat txertatzen du. Orria bisitatzean, script-ak nabigatzailearen edo aplikazio zaharkituen ahultasunak ustiatzen saia daiteke eta malwarea deskargatu.',
+    caseYear: 'WEB', caseTitle: 'Drive-by erasoa',
+    caseText: 'Webgune legitimo bat arriskuan jarri eta iragarki edo script maltzurrak txerta daitezke bisitariak kutsatzeko.',
+    realExample: 'Nabigatzaile zaharkitu batekin webgune kutsatu bat bisitatzen duzu; haren script-ak ahultasun bat aurkitu eta malwarea deskargatzen du.',
+    characteristics: ['Webgune kutsatu bat bisitatzea nahikoa izan daiteke', 'Script edo iragarki maltzurrak erabil ditzake', 'Nabigatzaile edo aplikazio zaharkituen ahultasunak bilatzen ditu'],
+    works: ['Erasotzaileak script maltzurra webgune batean txertatzen du.', 'Bisitariaren nabigatzaileak script-a jasotzen du.', 'Ahultasun bat aurkituz gero, malwarea deskargatu edo exekutatu daiteke.'],
+    signs: ['Nabigatzailearen abisuak', 'Deskarga edo birbideratze ustekabeak', 'Gailuan programa edo fitxategi ezezagunak'],
+    protect: 'Eguneratu sistema eta nabigatzailea, erabili web-babes eguneratua, eta ez ireki mezu edo webgune susmagarrietako estekak.'
+  },
+  troiarrak: {
+    number: '16', name: 'Troiarrak', category: 'Itxura engainagarria duen malwarea', color: 'blue',
+    short: 'Programa zilegi baten itxurapean ezkutatzen den malwarea.',
+    definition: 'Troiarra programa erabilgarri edo zilegi baten itxurapean ezkutatzen den malwarea da. Erabiltzaileak exekutatzen duenean instala daiteke, atzeko atea ireki eta informazioa lapurtu edo urruneko aginduak jasotzeko.',
+    caseYear: '2007', caseTitle: 'Zeus troiarra',
+    caseText: 'Zeus troiarrak programa arrunt baten itxura hartzen zuen eta online bankuko datuak lapurtzeko erabili zen.',
+    realExample: 'Doako programa baten instalatzaile faltsu bat irekitzean, programa arruntaz gain troiarra ere instala daiteke atzealdean.',
+    characteristics: ['Programa zilegi edo erakargarri baten itxura hartzen du', 'Normalean erabiltzaileak deskargatu edo exekutatu behar du', 'Urruneko sarbidea edo datu-lapurreta ahalbidetu dezake'],
+    works: ['Troiarra daraman fitxategia deskargatu edo irekitzen da.', 'Malwarea atzealdean instalatzen da, erabiltzaileari ohartarazi gabe.', 'Erasotzailearekin konektatu eta aginduak bete edo datuak bidal ditzake.'],
+    signs: ['Gailua motelago ibiltzea edo erroreak agertzea', 'Fitxategiak berez sortu edo ezabatzea', 'Abiaraztean programa ezezagunak exekutatzea'],
+    protect: 'Deskargatu programak webgune ofizialetatik, mantendu sistema eta antibirusa eguneratuta, eta ez ireki ezezagunen eranskinak.'
   }
 };
 
