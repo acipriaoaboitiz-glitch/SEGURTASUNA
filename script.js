@@ -3,6 +3,7 @@ const threats = {
     number: '01', name: 'Phisinga', category: 'Engainu soziala', color: 'coral',
     short: 'Konfiantzazko itxura duen mezu baten bidez zure datuak lortzea.',
     definition: 'Mezu edo posta elektroniko faltsuen bidez zure datu pertsonalak, hala nola pasahitzak eta banku-zenbakiak, lapurtzeko erabiltzen den engainua.',
+    sourceUrl: 'https://www.malwarebytes.com/phishing', sourceLabel: 'Malwarebytes',
     caseYear: '2016', caseTitle: 'John Podestaren phishing-a',
     caseText: 'AEBetako hauteskunde-kanpainako arduradun batek Google-ren segurtasun-alerta faltsu baten esteka sakatu zuen; kontua arriskuan geratu zen.',
     realExample: 'Bankuaren logotipoa duen SMS faltsu batek esteka batera sartzeko eskatzen dizu, kontua blokeatuko dutela esanez.',
@@ -14,7 +15,8 @@ const threats = {
   'biren-erasoa': {
     number: '02', name: 'Biren erasoa', category: 'Sarbide-erasoa', color: 'lime',
     short: 'Pasahitzak behin eta berriz probatuz kontu batera sartzeko saiakera.',
-    definition: 'Gailu batean sartu, fitxategiak kaltetzen dituen eta bere burua beste ordenagailu batzuetara zabaltzen duen programa kaltegarria.',
+    definition: 'Pasahitz posible asko automatikoki probatuz kontu edo sistema batera sartzen saiatzen den erasoa.',
+    sourceUrl: 'https://www.threatdown.com/glossary/what-is-a-brute-force-attack/', sourceLabel: 'ThreatDown',
     caseYear: '2012', caseTitle: 'LinkedIn-eko pasahitzak',
     caseText: 'LinkedIn-eko datu-ihesaren ondoren, 117 milioi pasahitz-hash argitaratu ziren; pasahitz ahul asko saiakera automatikoekin aurkitu ziren.',
     realExample: 'Erasotzaile batek sare sozial bateko kontuan pasahitz-konbinazio ugari probatzen ditu, saioa lortu arte.',
@@ -27,6 +29,7 @@ const threats = {
     number: '03', name: 'Troiarra', category: 'Malwarea', color: 'blue',
     short: 'Aplikazio edo fitxategi erabilgarriaren itxurapean ezkutatzen den programa kaltegarria.',
     definition: 'Programa erabilgarri eta seguru baten itxura duen mehatxua; kalterik egiten ez duela dirudi, baina barruan arriskua ezkutatzen du.',
+    sourceUrl: 'https://www.malwarebytes.com/trojan', sourceLabel: 'Malwarebytes',
     caseYear: '2007', caseTitle: 'Zeus troiarra',
     caseText: 'Zeus troiarrak milaka ordenagailu kutsatu zituen eta online bankuko datuak lapurtu zituen, programa arrunt baten itxurapean.',
     realExample: 'Doako joko edo programa baten instalatzaileak itxura normala du, baina atzean malwarea instalatzen du.',
@@ -39,6 +42,7 @@ const threats = {
     number: '04', name: 'Backdoorsak', category: 'Sarbide ezkutua', color: 'dark',
     short: 'Segurtasun-kontrolak saihestuz sistema batera sartzeko ate ezkutuak.',
     definition: 'Gailu baten segurtasuna saihestuz, erasotzaile bati ezkutuan sartzeko eta sistema urrunetik kontrolatzeko bidea ematen dioten sarrera ezkutuak.',
+    sourceUrl: 'https://www.malwarebytes.com/backdoor', sourceLabel: 'Malwarebytes',
     caseYear: '2020', caseTitle: 'SUNBURST / SolarWinds',
     caseText: 'SolarWinds Orion softwarearen eguneratze batean atzeko atea ezkutatu zen; erakunde askoren sistemetara sartzeko erabili zuten.',
     realExample: 'Router batean administratzailearen pasahitz lehenetsia aldatu gabe uzteak erasotzaileari sarbide ezkutua eman diezaioke.',
@@ -51,6 +55,7 @@ const threats = {
     number: '05', name: 'Spywarea', category: 'Zaintza digitala', color: 'yellow',
     short: 'Zure jarduera ezkutuan monitorizatu eta informazioa biltzen duen softwarea.',
     definition: 'Zure gailuan zer egiten duzun (bisitatutako orriak, sakatutako teklak...) ezkutuan espiatzen eta datu horiek biltzen dituen programa.',
+    sourceUrl: 'https://www.malwarebytes.com/spyware', sourceLabel: 'Malwarebytes',
     caseYear: '2016', caseTitle: 'Pegasus spywarea',
     caseText: 'Pegasus spywarea telefonoak urrunetik zelatatzeko erabili izan da; mezuak, deiak eta kokapena eskuratzeko gai zen.',
     realExample: 'Aplikazio susmagarri batek teklatuan idazten dituzun pasahitzak eta bisitatzen dituzun webguneak grabatzen ditu.',
@@ -63,6 +68,7 @@ const threats = {
     number: '06', name: 'Stealerrak', category: 'Datu-lapurreta', color: 'violet',
     short: 'Nabigatzaile eta aplikazioetan gordetako datuak lapurtzeko malwarea.',
     definition: 'Gailuan gordeta dituzun pasahitzak, saio-hasierako datuak eta txartel-zenbakiak zuzenean lapurtzera bideratutako programa mota.',
+    sourceUrl: 'https://attack.mitre.org/techniques/T1555/003/', sourceLabel: 'MITRE ATT&CK',
     caseYear: '2021', caseTitle: 'RedLine Stealer',
     caseText: 'RedLine malwareak nabigatzaileetan gordetako pasahitzak eta cookie-ak lapurtu zituen, eta kontu askotara baimenik gabe sartzeko erabili zen.',
     realExample: 'Deskarga susmagarri batek nabigatzailean gordetako pasahitzak eta saio aktiboen cookie-ak kopiatzen ditu.',
@@ -75,6 +81,7 @@ const threats = {
     number: '07', name: 'Koobface', category: 'Sare sozialetako malwarea', color: 'coral',
     short: 'Sare sozialen bidez zabaltzen den harra, bideo faltsuen amuarekin.',
     definition: 'Koobface Facebook izenarekin hitz-jokoa egiten duen harra da, sare sozialen bidez zabaltzen dena. Kontaktu baten itxurazko mezu batean bideo faltsu baterako esteka bidaltzen dizu; klik eginez gero, ordenagailua kutsa dezake eta zure informazioa lapurtu.',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Koobface', sourceLabel: 'Wikipedia',
     caseYear: '2008', caseTitle: 'Koobface harra',
     caseText: 'Koobface sare sozialetako kontuen bidez zabaldu zen, erabiltzaileak bideo faltsuak ikustera erakarriz.',
     realExample: 'Lagun baten kontutik bideo bat ikusteko esteka iristen zaizu. Estekan klik egin ondoren, fitxategi bat deskargatzeko eskatzen dizu.',
@@ -87,6 +94,7 @@ const threats = {
     number: '08', name: 'Botnet', category: 'Gailu kutsatuen sarea', color: 'blue',
     short: 'Erasotzaile batek urrunetik kontrolatzen duen gailu kutsatuen multzoa.',
     definition: 'Botnet bat ordenagailu eta beste gailu kutsatu askoren sarea da. Hacker batek urrunetik kontrolatzen ditu jabeak ohartu gabe, eta batera erabil ditzake spam-mezuak bidaltzeko edo webguneak blokeatzeko.',
+    sourceUrl: 'https://www.malwarebytes.com/botnet', sourceLabel: 'Malwarebytes',
     caseYear: '2016', caseTitle: 'Mirai botneta',
     caseText: 'Mirai botnetak segurtasun eskaseko gailuak kutsatu zituen eta haiek batera erabili zituen zerbitzuen aurkako eraso handietan.',
     realExample: 'Zure routerra kutsatuta badago, erasotzaileak beste gailu kutsatu batzuekin batera erabil dezake webgune baten zerbitzaria gainkargatzeko.',
@@ -99,6 +107,7 @@ const threats = {
     number: '09', name: 'Indar gordineko erasoa', category: 'Pasahitzen aurkako erasoa', color: 'violet',
     short: 'Pasahitza asmatu arte konbinazio ugari automatikoki probatzea.',
     definition: 'Kutxa gotor bat ireki nahian konbinazio guztiak banan-banan probatzea bezalakoa da. Erasotzailearen programak milaka pasahitz proba ditzake segundoko, zurea asmatu eta kontuan sartu arte.',
+    sourceUrl: 'https://www.threatdown.com/glossary/what-is-a-brute-force-attack/', sourceLabel: 'ThreatDown',
     caseYear: 'Adibidea', caseTitle: 'Pasahitzak probatzea',
     caseText: 'Pasahitz labur edo ohikoak automatikoki asmatzeko errazagoak dira; kontuetan saio-hasierako saiakera asko egiten dira.',
     realExample: 'Erasotzaileak kontu batean pasahitz-konbinazio ugari probatzen ditu, zuzena aurkitu eta saioa hasi arte.',
@@ -111,6 +120,7 @@ const threats = {
     number: '10', name: 'Stuxnet', category: 'Industria-sistemen aurkako harra', color: 'coral',
     short: 'Industria-kontrol sistemak helburu izan zituen malware sofistikatua.',
     definition: 'Stuxnet harrak Natanzeko zentral nuklearreko Siemens kontrol-sistemei eraso zien. Zentrifugen funtzionamendua manipulatu zuen; hainbat iturriren arabera, 1.000 inguru kaltetu zituen.',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Stuxnet', sourceLabel: 'Wikipedia',
     caseYear: '2010', caseTitle: 'Natanzeko zentrifugak',
     caseText: 'Stuxnetek Siemens kontrol-softwarea zuten industria-sistemak bilatu eta kontrolagailuen funtzionamendua aldatu zuen.',
     realExample: 'USB memoria baten bidez irits zitekeen sarera, eta Windowsen ahultasunak baliatu kontrol-sistemetara heltzeko.',
@@ -123,6 +133,7 @@ const threats = {
     number: '11', name: 'WannaCry', category: 'Ransomware erasoa', color: 'blue',
     short: 'Mundu osora zabaldu eta ospitale-zerbitzuak eten zituen ransomwarea.',
     definition: 'WannaCry 2017an zabaldu zen ransomwarea izan zen: kutsatutako ordenagailuetako fitxategiak blokeatu eta erreskatea eskatu zuen. Erresuma Batuko NHSn, gutxienez 81 trust kaltetu zituen eta milaka hitzordu bertan behera utzi ziren.',
+    sourceUrl: 'https://www.nao.org.uk/reports/investigation-wannacry-cyber-attack-and-the-nhs/', sourceLabel: 'National Audit Office',
     caseYear: '2017', caseTitle: 'WannaCry eta NHS',
     caseText: 'National Audit Office-ren arabera, NHSn gutxienez 81 trust kaltetu ziren eta 19.000 hitzordu inguru bertan behera geratu ziren.',
     realExample: 'Eguneratu gabeko Windows sistema bat kutsatu ondoren, WannaCry sarean zabaldu eta fitxategiak zifratu zituen.',
@@ -135,6 +146,7 @@ const threats = {
     number: '12', name: 'Atzeko ateak', category: 'Sarbide ezkutua', color: 'dark',
     short: 'Ohiko segurtasun-kontrolak saihesteko sarbide ezkutuak.',
     definition: 'Atzeko ate batek sistema batera ezkutuan sartzeko aukera ematen dio erasotzaileari. Softwarean edo firmwarean egon daiteke eta urruneko aginduak exekutatzeko, fitxategiak lapurtzeko edo konfigurazioa aldatzeko erabil daiteke.',
+    sourceUrl: 'https://www.malwarebytes.com/backdoor', sourceLabel: 'Malwarebytes',
     caseYear: '2016', caseTitle: 'Mirai eta IoT gailuak',
     caseText: 'Mirai malwareak pasahitz lehenetsi ahulak zituzten IoT gailuak hartu eta botnet batean sartzen zituen.',
     realExample: 'Mezu bateko eranskin susmagarri bat exekutatzeak gailuan urruneko sarbidea ematen duen malwarea instala dezake.',
@@ -147,6 +159,7 @@ const threats = {
     number: '13', name: 'Botnet', category: 'Gailu kutsatuen sarea', color: 'violet',
     short: 'Urrunetik kontrolatutako gailu kutsatuen sarea.',
     definition: 'Botnet bat erasotzaile baten agindupean dauden ordenagailu eta gailu kutsatuen multzoa da. Jabeek agian ez dute nabaritzen gailua kontrolpean dagoela.',
+    sourceUrl: 'https://www.malwarebytes.com/botnet', sourceLabel: 'Malwarebytes',
     caseYear: '2016', caseTitle: 'Mirai botneta',
     caseText: 'Mirai botnetak pasahitz lehenetsiak zituzten IoT gailuak kutsatu eta DDoS erasoetan erabili zituen.',
     realExample: 'Kutsatutako router batek beste gailu askorekin batera webgune bati eskaera ugari bidal diezazkioke.',
@@ -159,6 +172,7 @@ const threats = {
     number: '14', name: 'Harrak (worms)', category: 'Autohedatzen den malwarea', color: 'lime',
     short: 'Sarean bere kabuz zabal daitekeen malwarea.',
     definition: 'Har informatikoa sarean bere kabuz hedatzen den malwarea da; ez du erabiltzaileak ekipo bakoitzean instalatzea behar. Urruneko sarbidea ireki, segurtasun-tresnak oztopatu edo beste malware bat deskarga dezake.',
+    sourceUrl: 'https://www.malwarebytes.com/computer-worm', sourceLabel: 'Malwarebytes',
     caseYear: '2003', caseTitle: 'SQL Slammer harra',
     caseText: 'SQL Slammer harra azkar hedatu zen datu-baseetako zerbitzarien ahultasuna baliatuz eta sareko trafiko handia sortuz.',
     realExample: 'Segurtasun-eguneraketarik gabeko ekipo baten ahultasuna baliatuz, harra sare lokaleko beste ordenagailuetara heda daiteke.',
@@ -171,6 +185,7 @@ const threats = {
     number: '15', name: 'Mamuak', category: 'Drive-by download erasoa', color: 'yellow',
     short: 'Webgune kutsatu bat bisitatzean abia daitekeen erasoa.',
     definition: 'Drive-by download eraso batean, erasotzaileak webgune kaltetu batean script maltzur bat txertatzen du. Orria bisitatzean, script-ak nabigatzailearen edo aplikazio zaharkituen ahultasunak ustiatzen saia daiteke eta malwarea deskargatu.',
+    sourceUrl: 'https://www.malwarebytes.com/drive-by-download', sourceLabel: 'Malwarebytes',
     caseYear: 'WEB', caseTitle: 'Drive-by erasoa',
     caseText: 'Webgune legitimo bat arriskuan jarri eta iragarki edo script maltzurrak txerta daitezke bisitariak kutsatzeko.',
     realExample: 'Nabigatzaile zaharkitu batekin webgune kutsatu bat bisitatzen duzu; haren script-ak ahultasun bat aurkitu eta malwarea deskargatzen du.',
@@ -183,6 +198,7 @@ const threats = {
     number: '16', name: 'Troiarrak', category: 'Itxura engainagarria duen malwarea', color: 'blue',
     short: 'Programa zilegi baten itxurapean ezkutatzen den malwarea.',
     definition: 'Troiarra programa erabilgarri edo zilegi baten itxurapean ezkutatzen den malwarea da. Erabiltzaileak exekutatzen duenean instala daiteke, atzeko atea ireki eta informazioa lapurtu edo urruneko aginduak jasotzeko.',
+    sourceUrl: 'https://www.malwarebytes.com/trojan', sourceLabel: 'Malwarebytes',
     caseYear: '2007', caseTitle: 'Zeus troiarra',
     caseText: 'Zeus troiarrak programa arrunt baten itxura hartzen zuen eta online bankuko datuak lapurtzeko erabili zen.',
     realExample: 'Doako programa baten instalatzaile faltsu bat irekitzean, programa arruntaz gain troiarra ere instala daiteke atzealdean.',
@@ -203,14 +219,23 @@ if (detail) {
     <a class="back-link" href="index.html">MEHATXUEN MAPARA ITZULI</a>
     <section class="detail-hero accent-${threat.color}">
       <div class="detail-title"><p class="eyebrow">${threat.number} / ${threat.category}</p><h1>${threat.name}</h1><p>${threat.short}</p></div>
-      <div class="detail-case" aria-label="Bizitza errealeko kasua"><div class="case-visual"><strong>${threat.caseYear}</strong><span>${threat.number}</span></div><p>BENETAKO KASUA</p><h2>${threat.caseTitle}</h2><span>${threat.caseText}</span></div>
+      <div class="detail-case" aria-label="Bizitza errealeko kasua"><div class="case-visual"><strong>${threat.caseYear}</strong><span>${threat.number}</span></div><p>BENETAKO KASUA</p><h2>${threat.caseTitle}</h2><span>${threat.caseText}</span>
+        <nav class="example-sources" aria-label="Informazio-iturriak">
+          <span>INFORMAZIO-ITURRIAK</span>
+          <a href="${threat.sourceUrl}" target="_blank" rel="noopener noreferrer">${threat.sourceLabel}</a>
+          <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Google Gemini</a>
+        </nav>
+      </div>
     </section>
     <section class="detail-grid">
       <article class="definition-block"><p class="eyebrow">ZER DA?</p><h2>Arriskua<br><em>ulertzen.</em></h2><p>${threat.definition}</p></article>
       <div class="info-stack"><article class="info-card characteristics-card"><p class="eyebrow">EZAUGARRIAK</p><h3>Hitzaren seinaleak</h3><ul class="dash-list">${threat.characteristics.map(item => `<li>${item}</li>`).join('')}</ul></article><article class="info-card"><h3>Nola funtzionatzen du?</h3><ul class="dash-list">${threat.works.map(item => `<li>${item}</li>`).join('')}</ul></article><article class="info-card signs-card"><h3>Nola antzeman?</h3><ul class="dash-list">${threat.signs.map(item => `<li>${item}</li>`).join('')}</ul></article></div>
     </section>
     <section class="protect-banner accent-${threat.color}"><div><p class="eyebrow">03 / ZURE TXANDA</p><h2>Nola aurre egin?</h2><p>${threat.protect}</p></div></section>
-    <section class="real-example-panel"><h2>Horrela gerta daiteke.</h2><p>${threat.realExample}</p></section>
+    <section class="real-example-panel">
+      <h2>Horrela gerta daiteke.</h2>
+      <p>${threat.realExample}</p>
+    </section>
   `;
 }
 
