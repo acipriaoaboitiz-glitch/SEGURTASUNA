@@ -1,6 +1,7 @@
 const threats = {
   phisinga: {
     number: '01', name: 'Phisinga', category: 'Engainu soziala', color: 'coral',
+    image: 'images/definition-01.jpg', imageAlt: 'Pertsona bat banku-txartelarekin ordenagailu eramangarri baten aurrean',
     short: 'Konfiantzazko itxura duen mezu baten bidez zure datuak lortzea.',
     definition: 'Mezu edo posta elektroniko faltsuen bidez zure datu pertsonalak, hala nola pasahitzak eta banku-zenbakiak, lapurtzeko erabiltzen den engainua.',
     sourceUrl: 'https://www.malwarebytes.com/phishing', sourceLabel: 'Malwarebytes',
@@ -14,6 +15,7 @@ const threats = {
   },
   'biren-erasoa': {
     number: '02', name: 'Biren erasoa', category: 'Sarbide-erasoa', color: 'lime',
+    image: 'images/definition-02.jpg', imageAlt: 'Ordenagailu-pantailan agertzen den kodea',
     short: 'Pasahitzak behin eta berriz probatuz kontu batera sartzeko saiakera.',
     definition: 'Pasahitz posible asko automatikoki probatuz kontu edo sistema batera sartzen saiatzen den erasoa.',
     sourceUrl: 'https://www.threatdown.com/glossary/what-is-a-brute-force-attack/', sourceLabel: 'ThreatDown',
@@ -27,6 +29,7 @@ const threats = {
   },
   troiarra: {
     number: '03', name: 'Troiarra', category: 'Malwarea', color: 'blue',
+    image: 'images/definition-08.jpg', imageAlt: 'Ordenagailu eta bideojoko klasikoak, programa erakargarri baten adibide',
     short: 'Aplikazio edo fitxategi erabilgarriaren itxurapean ezkutatzen den programa kaltegarria.',
     definition: 'Programa erabilgarri eta seguru baten itxura duen mehatxua; kalterik egiten ez duela dirudi, baina barruan arriskua ezkutatzen du.',
     sourceUrl: 'https://www.malwarebytes.com/trojan', sourceLabel: 'Malwarebytes',
@@ -40,6 +43,7 @@ const threats = {
   },
   backdoorsak: {
     number: '04', name: 'Backdoorsak', category: 'Sarbide ezkutua', color: 'dark',
+    image: 'images/definition-04.jpg', imageAlt: 'Sareko konexio eta sarbide ugari dituen routerra',
     short: 'Segurtasun-kontrolak saihestuz sistema batera sartzeko ate ezkutuak.',
     definition: 'Gailu baten segurtasuna saihestuz, erasotzaile bati ezkutuan sartzeko eta sistema urrunetik kontrolatzeko bidea ematen dioten sarrera ezkutuak.',
     sourceUrl: 'https://www.malwarebytes.com/backdoor', sourceLabel: 'Malwarebytes',
@@ -53,6 +57,7 @@ const threats = {
   },
   spywarea: {
     number: '05', name: 'Spywarea', category: 'Zaintza digitala', color: 'yellow',
+    image: 'images/definition-05.jpg', imageAlt: 'Pertsona bat pantailan dagoen informazioa begiratzen',
     short: 'Zure jarduera ezkutuan monitorizatu eta informazioa biltzen duen softwarea.',
     definition: 'Zure gailuan zer egiten duzun (bisitatutako orriak, sakatutako teklak...) ezkutuan espiatzen eta datu horiek biltzen dituen programa.',
     sourceUrl: 'https://www.malwarebytes.com/spyware', sourceLabel: 'Malwarebytes',
@@ -66,6 +71,7 @@ const threats = {
   },
   stealerrak: {
     number: '06', name: 'Stealerrak', category: 'Datu-lapurreta', color: 'violet',
+    image: 'images/definition-06.jpg', imageAlt: 'Ordenagailuan erakusten diren erabiltzaile-datu eta grafikoak',
     short: 'Nabigatzaile eta aplikazioetan gordetako datuak lapurtzeko malwarea.',
     definition: 'Gailuan gordeta dituzun pasahitzak, saio-hasierako datuak eta txartel-zenbakiak zuzenean lapurtzera bideratutako programa mota.',
     sourceUrl: 'https://attack.mitre.org/techniques/T1555/003/', sourceLabel: 'MITRE ATT&CK',
@@ -79,6 +85,7 @@ const threats = {
   },
   koobface: {
     number: '07', name: 'Koobface', category: 'Sare sozialetako malwarea', color: 'coral',
+    image: 'images/definition-16.jpg', imageAlt: 'Hainbat pertsona gailu digitalen inguruan lanean',
     short: 'Sare sozialen bidez zabaltzen den harra, bideo faltsuen amuarekin.',
     definition: 'Koobface Facebook izenarekin hitz-jokoa egiten duen harra da, sare sozialen bidez zabaltzen dena. Kontaktu baten itxurazko mezu batean bideo faltsu baterako esteka bidaltzen dizu; klik eginez gero, ordenagailua kutsa dezake eta zure informazioa lapurtu.',
     sourceUrl: 'https://en.wikipedia.org/wiki/Koobface', sourceLabel: 'Wikipedia',
@@ -92,6 +99,7 @@ const threats = {
   },
   botnet: {
     number: '08', name: 'Botnet', category: 'Gailu kutsatuen sarea', color: 'blue',
+    image: 'images/definition-10.jpg', imageAlt: 'Gauez espaziotik ikusten den mundu konektatua',
     short: 'Erasotzaile batek urrunetik kontrolatzen duen gailu kutsatuen multzoa.',
     definition: 'Botnet bat ordenagailu eta beste gailu kutsatu askoren sarea da. Hacker batek urrunetik kontrolatzen ditu jabeak ohartu gabe, eta batera erabil ditzake spam-mezuak bidaltzeko edo webguneak blokeatzeko.',
     sourceUrl: 'https://www.malwarebytes.com/botnet', sourceLabel: 'Malwarebytes',
@@ -105,6 +113,7 @@ const threats = {
   },
   'indar-gordineko-erasoa': {
     number: '09', name: 'Indar gordineko erasoa', category: 'Pasahitzen aurkako erasoa', color: 'violet',
+    image: 'images/definition-13.jpg', imageAlt: 'Kodea duen ordenagailu eramangarri bat lan-mahai batean',
     short: 'Pasahitza asmatu arte konbinazio ugari automatikoki probatzea.',
     definition: 'Kutxa gotor bat ireki nahian konbinazio guztiak banan-banan probatzea bezalakoa da. Erasotzailearen programak milaka pasahitz proba ditzake segundoko, zurea asmatu eta kontuan sartu arte.',
     sourceUrl: 'https://www.threatdown.com/glossary/what-is-a-brute-force-attack/', sourceLabel: 'ThreatDown',
@@ -118,6 +127,7 @@ const threats = {
   },
   stuxnet: {
     number: '10', name: 'Stuxnet', category: 'Industria-sistemen aurkako harra', color: 'coral',
+    image: 'images/definition-12.jpg', imageAlt: 'Kontrol-panel elektroniko baten zirkuituak',
     short: 'Industria-kontrol sistemak helburu izan zituen malware sofistikatua.',
     definition: 'Stuxnet harrak Natanzeko zentral nuklearreko Siemens kontrol-sistemei eraso zien. Zentrifugen funtzionamendua manipulatu zuen; hainbat iturriren arabera, 1.000 inguru kaltetu zituen.',
     sourceUrl: 'https://en.wikipedia.org/wiki/Stuxnet', sourceLabel: 'Wikipedia',
@@ -131,6 +141,7 @@ const threats = {
   },
   wannacry: {
     number: '11', name: 'WannaCry', category: 'Ransomware erasoa', color: 'blue',
+    image: 'images/definition-11.jpg', imageAlt: 'Datu-zentro bateko zerbitzariak',
     short: 'Mundu osora zabaldu eta ospitale-zerbitzuak eten zituen ransomwarea.',
     definition: 'WannaCry 2017an zabaldu zen ransomwarea izan zen: kutsatutako ordenagailuetako fitxategiak blokeatu eta erreskatea eskatu zuen. Erresuma Batuko NHSn, gutxienez 81 trust kaltetu zituen eta milaka hitzordu bertan behera utzi ziren.',
     sourceUrl: 'https://www.nao.org.uk/reports/investigation-wannacry-cyber-attack-and-the-nhs/', sourceLabel: 'National Audit Office',
@@ -144,6 +155,7 @@ const threats = {
   },
   'atzeko-ate-unitatea': {
     number: '12', name: 'Atzeko ateak', category: 'Sarbide ezkutua', color: 'dark',
+    image: 'images/circuit-board.jpg', imageAlt: 'Osagai elektronikoak dituen zirkuitu-plaka',
     short: 'Ohiko segurtasun-kontrolak saihesteko sarbide ezkutuak.',
     definition: 'Atzeko ate batek sistema batera ezkutuan sartzeko aukera ematen dio erasotzaileari. Softwarean edo firmwarean egon daiteke eta urruneko aginduak exekutatzeko, fitxategiak lapurtzeko edo konfigurazioa aldatzeko erabil daiteke.',
     sourceUrl: 'https://www.malwarebytes.com/backdoor', sourceLabel: 'Malwarebytes',
@@ -157,6 +169,7 @@ const threats = {
   },
   'botnet-unitatea': {
     number: '13', name: 'Botnet', category: 'Gailu kutsatuen sarea', color: 'violet',
+    image: 'images/data-center.jpg', imageAlt: 'Datu-zentro bateko zerbitzari-armairuak eta sare-konexioak',
     short: 'Urrunetik kontrolatutako gailu kutsatuen sarea.',
     definition: 'Botnet bat erasotzaile baten agindupean dauden ordenagailu eta gailu kutsatuen multzoa da. Jabeek agian ez dute nabaritzen gailua kontrolpean dagoela.',
     sourceUrl: 'https://www.malwarebytes.com/botnet', sourceLabel: 'Malwarebytes',
@@ -170,6 +183,7 @@ const threats = {
   },
   harrak: {
     number: '14', name: 'Harrak (worms)', category: 'Autohedatzen den malwarea', color: 'lime',
+    image: 'images/definition-03.jpg', imageAlt: 'Sarean hedatzen den kode digital berdea',
     short: 'Sarean bere kabuz zabal daitekeen malwarea.',
     definition: 'Har informatikoa sarean bere kabuz hedatzen den malwarea da; ez du erabiltzaileak ekipo bakoitzean instalatzea behar. Urruneko sarbidea ireki, segurtasun-tresnak oztopatu edo beste malware bat deskarga dezake.',
     sourceUrl: 'https://www.malwarebytes.com/computer-worm', sourceLabel: 'Malwarebytes',
@@ -183,6 +197,7 @@ const threats = {
   },
   mamuak: {
     number: '15', name: 'Mamuak', category: 'Drive-by download erasoa', color: 'yellow',
+    image: 'images/definition-15.jpg', imageAlt: 'Webguneak eta kodea dituen ordenagailu eramangarria',
     short: 'Webgune kutsatu bat bisitatzean abia daitekeen erasoa.',
     definition: 'Drive-by download eraso batean, erasotzaileak webgune kaltetu batean script maltzur bat txertatzen du. Orria bisitatzean, script-ak nabigatzailearen edo aplikazio zaharkituen ahultasunak ustiatzen saia daiteke eta malwarea deskargatu.',
     sourceUrl: 'https://www.malwarebytes.com/drive-by-download', sourceLabel: 'Malwarebytes',
@@ -196,6 +211,7 @@ const threats = {
   },
   troiarrak: {
     number: '16', name: 'Troiarrak', category: 'Itxura engainagarria duen malwarea', color: 'blue',
+    image: 'images/secure-workspace.jpg', imageAlt: 'Ordenagailu eramangarri batean kodea eta aplikazioak ageri dira',
     short: 'Programa zilegi baten itxurapean ezkutatzen den malwarea.',
     definition: 'Troiarra programa erabilgarri edo zilegi baten itxurapean ezkutatzen den malwarea da. Erabiltzaileak exekutatzen duenean instala daiteke, atzeko atea ireki eta informazioa lapurtu edo urruneko aginduak jasotzeko.',
     sourceUrl: 'https://www.malwarebytes.com/trojan', sourceLabel: 'Malwarebytes',
@@ -228,7 +244,7 @@ if (detail) {
       </div>
     </section>
     <section class="detail-grid">
-      <article class="definition-block"><p class="eyebrow">ZER DA?</p><h2>Arriskua<br><em>ulertzen.</em></h2><p>${threat.definition}</p></article>
+      <article class="definition-block"><p class="eyebrow">ZER DA?</p><h2>Arriskua<br><em>ulertzen.</em></h2><p>${threat.definition}</p><figure class="definition-photo"><img src="${threat.image}" alt="${threat.imageAlt}" loading="lazy" decoding="async"><figcaption>${threat.number} / ${threat.category}</figcaption></figure></article>
       <div class="info-stack"><article class="info-card characteristics-card"><p class="eyebrow">EZAUGARRIAK</p><h3>Hitzaren seinaleak</h3><ul class="dash-list">${threat.characteristics.map(item => `<li>${item}</li>`).join('')}</ul></article><article class="info-card"><h3>Nola funtzionatzen du?</h3><ul class="dash-list">${threat.works.map(item => `<li>${item}</li>`).join('')}</ul></article><article class="info-card signs-card"><h3>Nola antzeman?</h3><ul class="dash-list">${threat.signs.map(item => `<li>${item}</li>`).join('')}</ul></article></div>
     </section>
     <section class="protect-banner accent-${threat.color}"><div><p class="eyebrow">03 / ZURE TXANDA</p><h2>Nola aurre egin?</h2><p>${threat.protect}</p></div></section>
