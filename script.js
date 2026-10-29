@@ -182,7 +182,7 @@ const threats = {
     protect: 'Aldatu lehenetsitako pasahitzak, instalatu eguneraketak, erabili suebakia eta deskargatu softwarea iturri fidagarrietatik.'
   },
   harrak: {
-    number: '14', name: 'Harrak (worms)', category: 'Autohedatzen den malwarea', color: 'lime',
+    number: '11', name: 'Harrak', category: 'Autohedatzen den malwarea', color: 'lime',
     image: 'images/definition-03.jpg', imageAlt: 'Sarean hedatzen den kode digital berdea',
     short: 'Sarean bere kabuz zabal daitekeen malwarea.',
     definition: 'Har informatikoa sarean bere kabuz hedatzen den malwarea da; ez du erabiltzaileak ekipo bakoitzean instalatzea behar. Urruneko sarbidea ireki, segurtasun-tresnak oztopatu edo beste malware bat deskarga dezake.',
@@ -196,7 +196,7 @@ const threats = {
     protect: 'Instalatu segurtasun-eguneraketak, erabili antibirus eta suebaki eguneratuak, kontuz ibili USBekin eta egin datuen segurtasun-kopiak.'
   },
   mamuak: {
-    number: '15', name: 'Mamuak', category: 'Drive-by download erasoa', color: 'yellow',
+    number: '10', name: 'Mamuak', category: 'Drive-by download erasoa', color: 'yellow',
     image: 'images/definition-15.jpg', imageAlt: 'Webguneak eta kodea dituen ordenagailu eramangarria',
     short: 'Webgune kutsatu bat bisitatzean abia daitekeen erasoa.',
     definition: 'Drive-by download eraso batean, erasotzaileak webgune kaltetu batean script maltzur bat txertatzen du. Orria bisitatzean, script-ak nabigatzailearen edo aplikazio zaharkituen ahultasunak ustiatzen saia daiteke eta malwarea deskargatu.',
@@ -236,15 +236,14 @@ if (detail) {
     <section class="detail-hero accent-${threat.color}">
       <div class="detail-title"><p class="eyebrow">${threat.number} / ${threat.category}</p><h1>${threat.name}</h1><p>${threat.short}</p></div>
       <div class="detail-case" aria-label="Bizitza errealeko kasua"><div class="case-visual"><strong>${threat.caseYear}</strong><span>${threat.number}</span></div><p>BENETAKO KASUA</p><h2>${threat.caseTitle}</h2><span>${threat.caseText}</span>
-        <nav class="example-sources" aria-label="Informazio-iturriak">
-          <span>INFORMAZIO-ITURRIAK</span>
+        <nav class="example-sources" aria-label="Kontsultatutako informazio-iturria">
+          <span>INFORMAZIO-ITURRIA</span>
           <a href="${threat.sourceUrl}" target="_blank" rel="noopener noreferrer">${threat.sourceLabel}</a>
-          <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Google Gemini</a>
         </nav>
       </div>
     </section>
     <section class="detail-grid">
-      <article class="definition-block"><p class="eyebrow">ZER DA?</p><h2>Arriskua<br><em>ulertzen.</em></h2><p>${threat.definition}</p><figure class="definition-photo"><img src="${threat.image}" alt="${threat.imageAlt}" loading="lazy" decoding="async"><figcaption>${threat.number} / ${threat.category}</figcaption></figure></article>
+      <article class="definition-block"><p class="eyebrow">ZER DA?</p><h2>Arriskua<br><em>ulertzen.</em></h2><p>${threat.definition}</p><figure class="definition-photo"><img src="${threat.image}" alt="${threat.imageAlt}" loading="lazy" decoding="async"><figcaption>${threat.number} / ${threat.category} · Irudiaren jatorria egiaztatu behar da</figcaption></figure></article>
       <div class="info-stack"><article class="info-card characteristics-card"><p class="eyebrow">EZAUGARRIAK</p><h3>Hitzaren seinaleak</h3><ul class="dash-list">${threat.characteristics.map(item => `<li>${item}</li>`).join('')}</ul></article><article class="info-card"><h3>Nola funtzionatzen du?</h3><ul class="dash-list">${threat.works.map(item => `<li>${item}</li>`).join('')}</ul></article><article class="info-card signs-card"><h3>Nola antzeman?</h3><ul class="dash-list">${threat.signs.map(item => `<li>${item}</li>`).join('')}</ul></article></div>
     </section>
     <section class="protect-banner accent-${threat.color}"><div><p class="eyebrow">03 / ZURE TXANDA</p><h2>Nola aurre egin?</h2><p>${threat.protect}</p></div></section>
