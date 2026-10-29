@@ -256,6 +256,43 @@ if (detail) {
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const fullscreenButton = document.querySelector('#fullscreen-toggle');
+
+if (fullscreenButton) {
+  const fullscreenLabel = fullscreenButton.querySelector('span');
+  const updateFullscreenButton = () => {
+    const isFullscreen = Boolean(document.fullscreenElement);
+    const label = isFullscreen ? 'Irten pantaila osotik' : 'Pantaila osoa';
+
+    fullscreenLabel.textContent = label;
+    fullscreenButton.setAttribute('aria-label', label);
+    fullscreenButton.setAttribute('aria-pressed', String(isFullscreen));
+  };
+
+  if (!document.documentElement.requestFullscreen || !document.exitFullscreen) {
+    fullscreenButton.disabled = true;
+    fullscreenLabel.textContent = 'Pantaila osoa ez dago erabilgarri';
+    fullscreenButton.setAttribute('aria-label', 'Pantaila osoa ez dago erabilgarri');
+  } else {
+    fullscreenButton.addEventListener('click', async () => {
+      try {
+        if (document.fullscreenElement) {
+          await document.exitFullscreen();
+        } else {
+          await document.documentElement.requestFullscreen();
+        }
+      } catch (error) {
+        console.error('Ezin izan da pantaila osoa aldatu.', error);
+        fullscreenLabel.textContent = 'Ezin izan da aktibatu';
+        fullscreenButton.setAttribute('aria-label', 'Ezin izan da pantaila osoa aktibatu');
+      }
+    });
+
+    document.addEventListener('fullscreenchange', updateFullscreenButton);
+    updateFullscreenButton();
+  }
+}
+
 if (!reducedMotion) {
   let animationFrame;
 
